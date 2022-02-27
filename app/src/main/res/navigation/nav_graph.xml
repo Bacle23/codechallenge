@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listAlbumFragment">
+
+    <fragment
+        android:id="@+id/listAlbumFragment"
+        android:name="com.example.codechallenge.view.ListAlbumFragment"
+        android:label="@string/list_album_fragment_label"
+        tools:layout="@layout/album_list_fragment">
+
+        <action
+            android:id="@+id/toThumbnailFragment"
+            app:destination="@+id/thumbnailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/thumbnailFragment"
+        android:name="com.example.codechallenge.view.ListThumbnailFragment"
+        android:label="@string/lis_thumbnail_fragment_label"
+        tools:layout="@layout/thumbnail_list_fragment">
+        <action
+            android:id="@+id/toFullImageFragment"
+            app:destination="@+id/showImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showImageFragment"
+        android:name="com.example.codechallenge.view.ShowFullImageFragment"
+        android:label="@string/show_image_fragment_label"
+        tools:layout="@layout/show_image_fragment" />
+
+</navigation>
